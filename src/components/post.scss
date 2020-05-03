@@ -1,0 +1,13 @@
+
+.blog-roll {
+  @include e(container) {
+    display: grid;
+    grid-gap: 2rem;
+  }
+
+  .post-section {
+    p {
+      color: white;
+    }
+  }
+}

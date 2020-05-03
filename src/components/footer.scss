@@ -1,0 +1,16 @@
+footer.footer {
+  padding: 3rem 2rem 0rem;
+  background-color: $midnight-black;
+
+  .menu-list {
+    margin-left: 0;
+  }
+}
+
+//layout
+.grid-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 4fr);
+  justify-items: center;
+  padding: 0rem 0 4rem;
+}
