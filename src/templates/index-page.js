@@ -22,21 +22,19 @@ export const IndexPageTemplate = ({
         <div className="section">
           <div className="content">
             <div className="is-12">
-              <h3 className="has-text-weight-semibold is-size-2">
-                Latest stories
-              </h3>
+              <h4 className="has-text-weight-semibold is-size-4">Recent Posts</h4>
               <BlogRoll />
-              <div className="is-12 has-text-centered">
-                <Link className="btn" to="/blog">
-                  Read more
-                </Link>
-              </div>
             </div>
           </div>
         </div>
       </div>
       <FilterContainer/>
     </section>
+    <div className="is-12 has-text-centered">
+      <Link className="btn" to="/blog">
+        Read more
+      </Link>
+    </div>
   </div>
 )
 

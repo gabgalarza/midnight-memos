@@ -1,0 +1,32 @@
+{
+  "filters": {
+    "header": "Filter By:",
+    "parentFilters": [
+      {
+        "Day": ["Mon.", "Tues.", "Wed.", "Thu.", "Fri.", "Sat.", "Sun."]
+      },
+      {
+        "Month": [
+          "Jan.",
+          "Feb.",
+          "Mar.",
+          "Apr.",
+          "May",
+          "June",
+          "July",
+          "Aug",
+          "Sept.",
+          "Oct.",
+          "Nov.",
+          "Dec."
+        ]
+      },
+      {
+        "Year": ["2020", "2019"]
+      },
+      {
+        "Topic": []
+      }
+    ]
+  }
+}
