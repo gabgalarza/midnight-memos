@@ -66,7 +66,7 @@ class Navbar extends React.Component {
                 Products
               </Link> */}
               <Link className="navbar-item" to="/blog">
-                Blog
+                Stories
               </Link>
               <Link className="navbar-item" to="/contact">
                 Contact

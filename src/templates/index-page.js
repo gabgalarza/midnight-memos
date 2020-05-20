@@ -18,7 +18,7 @@ export const IndexPageTemplate = ({
 }) => (
   <div>
     <section className="index-content section section--gradient">
-      <div className="container">
+      <div>
         <div className="section">
           <div className="content">
             <div className="is-12">
@@ -30,9 +30,9 @@ export const IndexPageTemplate = ({
       </div>
       <FilterContainer/>
     </section>
-    <div className="is-12 has-text-centered">
-      <Link className="btn" to="/blog">
-        Read more
+    <div className="is-12 has-text-centered load-more">
+      <Link className="button" to="/blog">
+        Load more stories
       </Link>
     </div>
   </div>

@@ -12,7 +12,11 @@ class FilterContainer extends Component {
   }
 
   componentDidMount() {
-    document.addEventListener('scroll', this.handleScroll.bind(this))
+    document.addEventListener('scroll', this.handleScroll.bind(this), false)
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('scroll', this.handleScroll.bind(this), false)
   }
 
   handleScroll = (event) => {

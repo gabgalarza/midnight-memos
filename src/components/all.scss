@@ -4,10 +4,16 @@
 @import "./footer.scss";
 @import "./post.scss";
 @import "./filtercontainer.scss";
+@import "./form.scss";
 
 html, .body {
   background-color: $midnight-black;
 }
+
+body {
+  color: #989696;
+}
+
 .navbar {
   background-color: $midnight-black;
   box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.5);
@@ -50,6 +56,10 @@ html, .body {
 .index-content {
   display: grid;
   grid-template-columns: 3fr 1fr;
+
+  @media screen and (min-width: $min-mobile-device-width) and (max-width: $max-mobile-device-width) {
+    grid-template-columns: 3fr;
+  }
 }
 
 .content {
@@ -201,13 +211,28 @@ $menu-label-color: $white-ter;
   vertical-align: middle;
   display: inline;
 }
+
 .section {
   background-color: $midnight-black;
+
+  h1, h2, h3, h4 {
+    color: $content-title;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    font-size: 12px;
+    font-weight: bolder;
+  }
 }
 
 // blog roll
 .blog-list-item.is-featured {
   background-color: #4301138c;
+}
+
+.load-more .button {
+  background-color: transparent;
+  color: white;
 }
 
 .blog-list-item {
@@ -235,7 +260,7 @@ $menu-label-color: $white-ter;
   }
 }
 
-@media (max-width: 435px) {
+@media screen and (min-width: $min-mobile-device-width) and (max-width: $max-mobile-device-width) {
   .navbar-menu {
     background-color: $midnight-gray;
     padding: 0.5rem 0 3rem;
@@ -269,7 +294,6 @@ $menu-label-color: $white-ter;
     
   .blog-list-item .featured-thumbnail {
     text-align: center;
-    max-width: 70%;
     margin: 0 0 1em;
   }
 }

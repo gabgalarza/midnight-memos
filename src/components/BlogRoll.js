@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import Truncate from 'react-truncate'
 
 class BlogRoll extends React.Component {
   render() {
@@ -18,12 +19,14 @@ class BlogRoll extends React.Component {
                   <header>
                     {post.frontmatter.featuredimage ? (
                       <div className="featured-thumbnail">
-                        <PreviewCompatibleImage
-                          imageInfo={{
-                            image: post.frontmatter.featuredimage,
-                            alt: `featured image thumbnail for post ${post.title}`,
-                          }}
-                        />
+                        <Link to={post.fields.slug}>
+                          <PreviewCompatibleImage
+                            imageInfo={{
+                              image: post.frontmatter.featuredimage,
+                              alt: `featured image thumbnail for post ${post.title}`,
+                            }}
+                          />
+                        </Link>
                       </div>
                     ) : null}
                     <div className="post-section">
@@ -39,12 +42,14 @@ class BlogRoll extends React.Component {
                           {post.frontmatter.date}
                         </span>
                       </p>
-                      <div>
-                        <p>{post.excerpt}</p>
+                      <div className="post-content">
+                        <Truncate
+                          lines={4}
+                          ellipsis={<div>...</div>}
+                        >
+                          <p>{post.excerpt}</p>
+                        </Truncate>
                         <br />
-                        <Link className="button" to={post.fields.slug}>
-                          Keep Reading →
-                        </Link>
                       </div>
                     </div>
                   </header>

@@ -1,4 +1,3 @@
-
 .blog-roll {
   @include e(container) {
     display: grid;
@@ -8,6 +7,18 @@
   .post-section {
     p {
       color: white;
+    }
+  }
+
+  .post-content {
+    span {
+      color: $post-text-color;
+    }
+  }
+
+  .has-text-primary {
+    &:hover {
+      text-decoration: underline;
     }
   }
 }
