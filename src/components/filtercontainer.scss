@@ -1,0 +1,48 @@
+.filter-container {
+  position: relative;
+  height: 100%;
+  transition: opacity 1s ease;
+
+  .header {
+    margin-bottom: 2rem;
+    color: $content-title;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    font-size: 12px;
+    font-weight: bolder;
+  }
+
+  .is-fixed {
+    position: fixed;
+    opacity: 1;
+  }
+
+  .is-hidden {
+    position: relative;
+    opacity: 0;
+  }
+}
+
+.collapsible-div {
+  margin-bottom: 0.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.collapsible-link {
+  display: grid;
+  grid-template-columns: 2fr auto;
+  user-select: none;
+}
+
+.content-outer {
+  height: auto;
+  transition: height 100ms linear 0s;
+  overflow: hidden;
+  margin-left: 1rem;
+}
+
+.content-inner {
+  padding: 1rem 0 1rem;
+}

@@ -1,0 +1,39 @@
+// BEM Mixins
+@mixin e($element) {
+  &__#{$element} {
+      @content;
+  }
+}
+
+@mixin m($modifier) {
+  &--#{$modifier} {
+      @content;
+  }
+}
+
+// Config vars
+// Kaldi logo brand color: #FD461E
+$kaldi-red:#f93257;
+$kaldi-red-invert: #fff;
+
+// Colors
+$primary: $kaldi-red;
+$primary-invert: $kaldi-red-invert;
+$midnight-black: black;
+$midnight-gray: #1a1a1a;
+$content-gray: lightgray;
+$content-green: #14ff72;
+$content-title: white;
+$post-text-color: white;
+$body-color: #333;
+$black: #2b2523;
+
+// Device widths
+$min-mobile-device-width: 375px;
+$max-mobile-device-width: 812px;
+
+$min-tablet-device-width: 768px;
+$max-tablet-device-width: 1024px;
+
+$min-laptop-device-width: 1200px;
+$max-laptop-device-width: 1600px;
