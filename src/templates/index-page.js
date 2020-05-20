@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import { isMobile } from '../utils'
 
 import Layout from '../components/Layout'
 import Features from '../components/Features'
@@ -28,7 +29,7 @@ export const IndexPageTemplate = ({
           </div>
         </div>
       </div>
-      <FilterContainer/>
+      {!isMobile && <FilterContainer/>}
     </section>
     <div className="is-12 has-text-centered load-more">
       <Link className="button" to="/blog">
