@@ -4,10 +4,12 @@ title: Lockdown Blues
 date: 2020-05-01T02:23:37.262Z
 description: I don't know what the hell is wrong with me.
 featuredpost: true
-featuredimage: /img/banner_getting-bullied-vector-id471076106.jpg
+featuredimage: /img/drain.jpg
 tags:
   - lockdown angry pissed
 ---
+![drain](/img/drain.jpg)
+
 Every single time. I just let someone get me angry over anything, ANYTHING.
 
 They said something that pissed me off. Now my day's ruined, let's think about it until my brain starts to hurt. Just stick a knife in my head. Just do it.
