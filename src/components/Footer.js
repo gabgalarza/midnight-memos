@@ -14,9 +14,33 @@ const Footer = class extends React.Component {
         <div className="content footer-logo has-text-centered">
           <img
             src={logo}
-            alt="Kaldi"
+            alt="Midnight Memos"
             style={{ width: '25em', height: '5em', 'filter': 'invert(1)' }}
           />
+          <div className="is-4 social">
+            <a title="facebook" href="https://facebook.com">
+              <img
+                src={facebook}
+                alt="Facebook"
+                style={{ width: '1em', height: '1em' }}
+              />
+            </a>
+            <a title="twitter" href="https://twitter.com/g1rza">
+              <img
+                className="fas fa-lg"
+                src={twitter}
+                alt="Twitter"
+                style={{ width: '1em', height: '1em' }}
+              />
+            </a>
+            <a title="instagram" href="https://instagram.com">
+              <img
+                src={instagram}
+                alt="Instagram"
+                style={{ width: '1em', height: '1em' }}
+              />
+            </a>
+          </div>
         </div>
         <div className="content has-text-centered has-text-white-ter">
           <div className="container has-text-white-ter">
@@ -34,26 +58,18 @@ const Footer = class extends React.Component {
                         About
                       </Link>
                     </li>
-                    <li>
+                    {/* TODO: Enable products footer link once page is done */}
+                    {/* <li>
                       <Link className="navbar-item" to="/products">
                         Products
                       </Link>
-                    </li>
-                    <li>
+                    </li> */}
+                    {/*TODO: Enable Form Examples once ready to build comments section*/}
+                    {/* <li>
                       <Link className="navbar-item" to="/contact/examples">
                         Form Examples
                       </Link>
-                    </li>
-                    <li>
-                      <a
-                        className="navbar-item"
-                        href="/admin/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Admin
-                      </a>
-                    </li>
+                    </li>*/}
                   </ul>
                 </section>
               </div>
@@ -72,37 +88,6 @@ const Footer = class extends React.Component {
                     </li>
                   </ul>
                 </section>
-              </div>
-              <div className="is-4 social">
-                <a title="facebook" href="https://facebook.com">
-                  <img
-                    src={facebook}
-                    alt="Facebook"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="twitter" href="https://twitter.com/g1rza">
-                  <img
-                    className="fas fa-lg"
-                    src={twitter}
-                    alt="Twitter"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="instagram" href="https://instagram.com">
-                  <img
-                    src={instagram}
-                    alt="Instagram"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="vimeo" href="https://vimeo.com">
-                  <img
-                    src={vimeo}
-                    alt="Vimeo"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
               </div>
             </div>
           </div>

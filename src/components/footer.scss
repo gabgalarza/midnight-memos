@@ -12,10 +12,6 @@ footer.footer {
     }
   
     .social {
-      display: grid;
-      grid-template-rows: .1fr .1fr .1fr .1fr;
-      align-content: space-evenly;
-
       a {
         padding: .5em .5em .3em;
         border-radius: 1em;
