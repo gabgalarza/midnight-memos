@@ -8,6 +8,7 @@ module.exports = {
       'Please excuse everything you read here: i\'m sleepy and I don\'t know what i\'m talking about.',
   },
   plugins: [
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
