@@ -24,12 +24,12 @@ export const IndexPageTemplate = ({
           <div className="content">
             <div className="is-12">
               <h4 className="has-text-weight-semibold is-size-4">Recent Posts</h4>
-              <BlogRoll />
+              <BlogRoll isMobile={isMobile}/>
             </div>
           </div>
         </div>
       </div>
-      {!isMobile && <FilterContainer/>}
+      {/*!isMobile && <FilterContainer/>*/}
     </section>
     <div className="is-12 has-text-centered load-more">
       <Link className="button" to="/blog">

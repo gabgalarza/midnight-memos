@@ -18,13 +18,13 @@ const Footer = class extends React.Component {
             style={{ width: '25em', height: '5em', 'filter': 'invert(1)' }}
           />
           <div className="is-4 social">
-            <a title="facebook" href="https://facebook.com">
+            {/* <a title="facebook" href="https://facebook.com">
               <img
                 src={facebook}
                 alt="Facebook"
                 style={{ width: '1em', height: '1em' }}
               />
-            </a>
+            </a> */}
             <a title="twitter" href="https://twitter.com/g1rza">
               <img
                 className="fas fa-lg"
@@ -33,13 +33,13 @@ const Footer = class extends React.Component {
                 style={{ width: '1em', height: '1em' }}
               />
             </a>
-            <a title="instagram" href="https://instagram.com">
+            {/* <a title="instagram" href="https://instagram.com">
               <img
                 src={instagram}
                 alt="Instagram"
                 style={{ width: '1em', height: '1em' }}
               />
-            </a>
+            </a> */}
           </div>
         </div>
         <div className="content has-text-centered has-text-white-ter">
@@ -53,11 +53,12 @@ const Footer = class extends React.Component {
                         Home
                       </Link>
                     </li>
-                    <li>
+                    {/*TODO: uncomment once About page is ready*/}
+                    {/* <li>
                       <Link className="navbar-item" to="/about">
                         About
                       </Link>
-                    </li>
+                    </li> */}
                     {/* TODO: Enable products footer link once page is done */}
                     {/* <li>
                       <Link className="navbar-item" to="/products">

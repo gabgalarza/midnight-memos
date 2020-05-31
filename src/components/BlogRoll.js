@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { isMobile } from '../utils'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 import Truncate from 'react-truncate'
@@ -8,7 +9,6 @@ class BlogRoll extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
-
     return (
       <div id="BlogRollDiv" className="blog-roll">
         <div className="blog-roll__container">
@@ -44,7 +44,7 @@ class BlogRoll extends React.Component {
                       </p>
                       <div className="post-content">
                         <Truncate
-                          lines={4}
+                          lines={isMobile ? 2 : 4}
                           ellipsis={<div>...</div>}
                         >
                           <p>{post.excerpt}</p>
