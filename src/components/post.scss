@@ -22,3 +22,29 @@
     }
   }
 }
+
+.blog-page {
+  h1 {
+    font-size: $h1-font-size !important;
+  }
+
+  h2 {
+    font-size: $h2-font-size !important;
+  }
+
+  h3 {
+    font-size: $h3-font-size !important;
+  }
+
+  h4 {
+    font-size: $h4-font-size !important;
+  }
+
+  a {
+    overflow-wrap: break-word;
+  }
+
+  @media screen and (min-width: $min-mobile-device-width) and (max-width: $max-mobile-device-width) {
+    padding: 3rem 0.5rem;
+  }
+}

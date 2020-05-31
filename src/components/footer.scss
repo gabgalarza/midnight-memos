@@ -2,6 +2,29 @@ footer.footer {
   padding: 3rem 2rem 0rem;
   background-color: $midnight-black;
 
+  @media screen and (min-width: $min-mobile-device-width) and (max-width: $max-mobile-device-width) {
+    padding: 3rem 1.3rem 0;
+
+    .footer-logo {
+      @media screen and (min-width: $min-mobile-device-width) and (max-width: $max-mobile-device-width) {
+        padding: 0 1rem;
+      }
+    }
+  
+    .social {
+      a {
+        padding: .5em .5em .3em;
+        border-radius: 1em;
+        background-color: #f5f5f5;
+        margin: .5em;
+        width: 2em;
+        height: 2em;
+        vertical-align: middle;
+        display: inline;
+      }
+    }
+  }
+
   .menu-list {
     margin-left: 0;
   }

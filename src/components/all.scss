@@ -6,6 +6,9 @@
 @import "./filtercontainer.scss";
 @import "./form.scss";
 
+//Responsiveness
+
+
 html, .body {
   background-color: $midnight-black;
 }
@@ -267,18 +270,31 @@ $menu-label-color: $white-ter;
 }
 
 @media screen and (min-width: $min-mobile-device-width) and (max-width: $max-mobile-device-width) {
+  .navbar .container {
+    max-width: none;
+  }
   .navbar-menu {
-    background-color: $midnight-gray;
+    background-color: $midnight-black;
     padding: 0.5rem 0 3rem;
+    height: 100vh;
 
     a.navbar-item {
       cursor: pointer;
       padding: 0.6rem 1rem;
-      font-size: 1.5rem;
+      font-size: 21px !important;
+      height: 42px;
+      margin-bottom: 15px;
 
       &:hover {
         background-color: transparent;
       }
+    }
+
+    .navbar-start {
+      height: 60vh;
+      display: grid;
+      justify-content: center;
+      align-content: center;
     }
   }
 

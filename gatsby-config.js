@@ -2,11 +2,14 @@ var proxy = require('http-proxy-middleware')
 
 module.exports = {
   siteMetadata: {
+    siteUrl: 'https://www.midnightmemos.com',
     title: 'Midnight Memos',
     description:
       'Please excuse everything you read here: i\'m sleepy and I don\'t know what i\'m talking about.',
   },
   plugins: [
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-robots-txt',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
