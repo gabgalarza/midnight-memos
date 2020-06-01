@@ -65,12 +65,14 @@ const TemplateWrapper = ({ children }) => {
         {children}
         {/*TODO: Workaround add delay tracking dynamic urls*/}
         <div style={{ display: 'none' }}>
-          {setTimeout(() => {
-            window.ga('send', 'pageview', {
-              'page': window.location.pathname,
-              'title': document.title
-            })
-          }, 1000)}
+          {
+            process.browser && setTimeout(() => {
+              global.ga('send', 'pageview', {
+                'page': window.location.pathname,
+                'title': document.title
+              })
+            }, 1000)
+          }
         </div>
       </div>
       <Footer />
