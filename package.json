@@ -7,6 +7,7 @@
     "bulma": "^0.7.0",
     "gatsby": "^2.18.16",
     "gatsby-image": "^2.0.23",
+    "gatsby-plugin-google-analytics": "^2.3.2",
     "gatsby-plugin-netlify": "^2.0.6",
     "gatsby-plugin-netlify-cms": "^4.1.6",
     "gatsby-plugin-purgecss": "^4.0.0",
@@ -32,6 +33,7 @@
     "react": "^16.8.4",
     "react-collapsible": "^2.7.0",
     "react-dom": "^16.8.4",
+    "react-ga": "^2.7.0",
     "react-helmet": "^5.2.0",
     "react-truncate": "^2.4.0",
     "uuid": "^3.2.1"
