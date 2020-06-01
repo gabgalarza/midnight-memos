@@ -20,7 +20,7 @@ tags:
 
 Below are resources by state that are offering legal services to those affected by protesting for George Floyd. Check your local area and share to those that might need it:
 
-<https://1drv.ms/u/s!AsHRYOemzlwcgsA96wMwPC4VebA2AA>
+<https://docs.google.com/document/d/1X4-YS3vFn5CLL9QtJSU0xqmTh_h8XilXgOqGAjZISBI/mobilebasic>
 
 ## Donate
 
