@@ -40,6 +40,8 @@ export const BlogPostTemplate = ({
                   </ul>
                 </div>
               ) : null}
+            {/* Comments Section */}
+            <div id="disqus_thread"></div>
             </div>
           </div>
         </section>

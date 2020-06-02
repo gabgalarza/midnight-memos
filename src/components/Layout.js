@@ -31,6 +31,24 @@ const TemplateWrapper = ({ children }) => {
           ga('create', 'UA-168116531-1', 'auto');
           `}
         </script>
+        <script>
+          {`
+            var disqus_config = function() {
+              this.page.url = window.location.href;
+              this.page.identifier = window.location.pathname;
+            };
+
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://midnightmemos.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+
+            (d.head || d.body).appendChild(s);
+            })();
+          `}
+        </script>
+        <noscript>{`Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>`}</noscript>
+        <script id="dsq-count-scr" src="//midnightmemos.disqus.com/count.js" async></script>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -71,6 +89,16 @@ const TemplateWrapper = ({ children }) => {
                 'page': window.location.pathname,
                 'title': document.title
               })
+
+              //reset DISQUS thread
+              global.DISQUS.reset({
+                reload: true,
+                config: function () {  
+                  this.page.url = window.location.href;
+                  this.page.identifier = window.location.pathname;
+                }
+              });
+
             }, 1000)
           }
         </div>
