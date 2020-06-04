@@ -49,6 +49,8 @@ const TemplateWrapper = ({ children }) => {
         </script>
         <noscript>{`Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>`}</noscript>
         <script id="dsq-count-scr" src="//midnightmemos.disqus.com/count.js" async></script>
+        {/* AdSense */}
+        <script data-ad-client="ca-pub-3289575466853812" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
