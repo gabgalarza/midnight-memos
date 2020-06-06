@@ -4,9 +4,9 @@ import { Link, graphql } from 'gatsby'
 import { isMobile } from '../utils'
 
 import Layout from '../components/Layout'
-import Features from '../components/Features'
+//import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
-import FilterContainer from '../components/FilterContainer'
+//import FilterContainer from '../components/FilterContainer'
 
 export const IndexPageTemplate = ({
   image,

@@ -269,7 +269,7 @@ $menu-label-color: $white-ter;
   }
 }
 
-@media screen and (min-width: $min-mobile-device-width) and (max-width: $max-mobile-device-width) {
+@include for-phone-only {
   .navbar .container {
     max-width: none;
   }

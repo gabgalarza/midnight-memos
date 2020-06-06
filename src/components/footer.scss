@@ -27,6 +27,12 @@ footer.footer {
 
   .menu-list {
     margin-left: 0;
+
+    a {
+      @include for-phone-only {
+        font-size: 1em;
+      }
+    }
   }
 }
 

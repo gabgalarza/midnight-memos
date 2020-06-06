@@ -2,10 +2,10 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import logo from '../img/midnight-memos.svg'
-import facebook from '../img/social/facebook.svg'
-import instagram from '../img/social/instagram.svg'
+// import facebook from '../img/social/facebook.svg'
+// import instagram from '../img/social/instagram.svg'
 import twitter from '../img/social/twitter.svg'
-import vimeo from '../img/social/vimeo.svg'
+// import vimeo from '../img/social/vimeo.svg'
 
 const Footer = class extends React.Component {
   render() {
@@ -82,6 +82,12 @@ const Footer = class extends React.Component {
                         Stories
                       </Link>
                     </li>
+                  </ul>
+                </section>
+              </div>
+              <div className="is-4">
+                <section>
+                  <ul className="menu-list">
                     <li>
                       <Link className="navbar-item" to="/contact">
                         Contact

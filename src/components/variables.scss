@@ -11,8 +11,13 @@
   }
 }
 
+@mixin for-phone-only {
+  @media screen and (min-width: $min-mobile-device-width) and (max-width: $max-mobile-device-width) {
+    @content;
+  }
+}
+
 // Config vars
-// Kaldi logo brand color: #FD461E
 $kaldi-red:#f93257;
 $kaldi-red-invert: #fff;
 

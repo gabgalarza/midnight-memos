@@ -38,13 +38,20 @@ const TemplateWrapper = ({ children }) => {
               this.page.identifier = window.location.pathname;
             };
 
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://midnightmemos.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
+            if (window) {
+              window.initDisqusScript = function() {
+                console.log('initDisqusScript called');
+                // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://midnightmemos.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
 
-            (d.head || d.body).appendChild(s);
-            })();
+                //only append on blog post pages
+                if (window.location.pathname.includes("blog/")) {
+                  (d.head || d.body).appendChild(s);
+                }
+              }
+            }
           `}
         </script>
         <noscript>{`Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>`}</noscript>
@@ -91,15 +98,6 @@ const TemplateWrapper = ({ children }) => {
                 'page': window.location.pathname,
                 'title': document.title
               })
-
-              //reset DISQUS thread
-              global.DISQUS.reset({
-                reload: true,
-                config: function () {  
-                  this.page.url = window.location.href;
-                  this.page.identifier = window.location.pathname;
-                }
-              });
 
             }, 1000)
           }
