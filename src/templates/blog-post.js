@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import LoadMoreButton from '../components/LoadMoreButton'
 
 export const BlogPostTemplate = ({
   content,
@@ -15,6 +16,14 @@ export const BlogPostTemplate = ({
   helmet,
 }) => {
   const PostContent = contentComponent || Content
+  const [loadMore, setLoadMore] = useState(0);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoadMore(true);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <section className="section blog-page">
@@ -30,7 +39,7 @@ export const BlogPostTemplate = ({
               <PostContent content={content} />
               {tags && tags.length ? (
                 <div style={{ marginTop: `4rem` }}>
-                  <h4>Tags</h4>
+                  <h3>Tags</h3>
                   <ul className="taglist">
                     {tags.map(tag => (
                       <li key={tag + `tag`}>
@@ -41,6 +50,14 @@ export const BlogPostTemplate = ({
                 </div>
               ) : null}
             {/* Comments Section */}
+            <div className="comments-container">
+              {loadMore
+                &&
+                <LoadMoreButton action={global.initDisqusScript}>
+                  Load Comments
+                </LoadMoreButton>
+              }
+            </div>
             <div id="disqus_thread"></div>
             </div>
           </div>

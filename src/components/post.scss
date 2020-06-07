@@ -24,6 +24,10 @@
 }
 
 .blog-page {
+  @media screen and (min-width: $min-mobile-device-width) and (max-width: $max-mobile-device-width) {
+    padding: 3rem 0.5rem;
+  }
+
   h1 {
     font-size: $h1-font-size !important;
   }
@@ -44,7 +48,24 @@
     overflow-wrap: break-word;
   }
 
+  .comments-container {
+    display: grid;
+    place-content: center;
+
+    .load-comments {
+      @extend .button;
+      background-color: transparent;
+      color: white;
+    }
+
+    .hide {
+      display: none;
+    }
+  }
+
   @media screen and (min-width: $min-mobile-device-width) and (max-width: $max-mobile-device-width) {
-    padding: 3rem 0.5rem;
+    .section {
+      padding: 3rem 1rem;
+    }
   }
 }

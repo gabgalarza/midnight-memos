@@ -65,10 +65,13 @@ class Navbar extends React.Component {
               {/* <Link className="navbar-item" to="/products">
                 Products
               </Link> */}
-              <Link className="navbar-item" to="/blog">
+              <Link className="navbar-item home" to="/">
+                Home
+              </Link>
+              <Link className="navbar-item stories" to="/blog">
                 Stories
               </Link>
-              <Link className="navbar-item" to="/contact">
+              <Link className="navbar-item contact" to="/contact">
                 Contact
               </Link>
               {/* <Link className="navbar-item" to="/contact/examples">

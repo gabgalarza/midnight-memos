@@ -1,13 +1,20 @@
+
 .blog-form {
+  max-width: 500px;
+  margin: auto;
+  color: white;
+
+  .field:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
   .control {
     .input {
       border-radius: unset;
       background-color: transparent;
-      border-top: none;
-      border-left: none;
-      border-right: none;
+      color: inherit;
 
-      &:focus, &:input:-internal-autofill-selected {
+      &:focus, &:-internal-autofill-selected {
         background-color: transparent;
         border-color: white;
         box-shadow: unset;
@@ -15,8 +22,13 @@
       }
     }
 
+    ::placeholder {
+      color: inherit;
+    }
+
     .textarea {
       background-color: transparent;
+      color: white;
 
       &:focus {
         background-color: transparent;
@@ -24,6 +36,15 @@
         box-shadow: unset;
         outline: none;
       }
+    }
+  }
+
+  .button {
+    background-color: transparent;
+    color: $post-text-color;
+
+    &:hover {
+      background-color: $content-green;
     }
   }
 }
