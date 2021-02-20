@@ -41,6 +41,13 @@ module.exports = {
         name: 'images',
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/data`,
+        name: `data`,
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
@@ -84,8 +91,12 @@ module.exports = {
         purgeOnly: ['/all.scss'], // applies purging only on the bulma css file
       },
     }, // must be after other CSS plugins
+    `gatsby-transformer-yaml`,
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
+  mapping: {
+    "MarkdownRemark.frontmatter.author": `AuthorYaml`,
+  },
   // for avoiding CORS while developing Netlify Functions locally
   // read more: https://www.gatsbyjs.org/docs/api-proxy/#advanced-proxying
   developMiddleware: app => {

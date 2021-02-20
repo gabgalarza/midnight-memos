@@ -37,15 +37,17 @@ class BlogRoll extends React.Component {
                         >
                           {post.frontmatter.title}
                         </Link>
-                        <span> &bull; </span>
-                        <span className="subtitle is-size-5 is-block">
+                        <span className="is-size-5 is-block">
                           {post.frontmatter.date}
+                        </span>
+                        <span className="is-size-5 is-block">
+                          {post.frontmatter.author ? `by ${post.frontmatter.author.id}` : ""}
                         </span>
                       </p>
                       <div className="post-content">
                         <Truncate
-                          lines={isMobile ? 2 : 4}
-                          ellipsis={<div>...</div>}
+                          lines={isMobile ? 2 : 8}
+                          ellipsis={<span>...</span>}
                         >
                           <p>{post.excerpt}</p>
                         </Truncate>
@@ -89,6 +91,9 @@ export default () => (
                 title
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
+                author {
+                  id
+                }
                 featuredpost
                 featuredimage {
                   childImageSharp {
