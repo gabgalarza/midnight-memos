@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: Why DeFi will radically change how money is handled
 date: 2021-02-07T01:23:20.172Z
+author: Gabriel Galarza
 description: >
   People are tired of traditional financing methods and need to find new ways to
   handle their money. DeFi can solve this and more by connecting consumers with
